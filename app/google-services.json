@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "406026221870",
+    "project_id": "test-dyegote",
+    "storage_bucket": "test-dyegote.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406026221870:android:6f06669fe3ec2b808922bf",
+        "android_client_info": {
+          "package_name": "com.dyegote.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406026221870-3iv4qv6l86sfars1kau4tv0hhs3kbt9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3J4m8ErC6HbPcS3alUJkqWBhQPJpbmgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406026221870-3iv4qv6l86sfars1kau4tv0hhs3kbt9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
