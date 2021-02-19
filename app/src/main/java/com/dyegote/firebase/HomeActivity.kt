@@ -7,12 +7,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.dyegote.firebase.databinding.ActivityHomeBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding;
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class HomeActivity : AppCompatActivity() {
 
         if (email != null && provider != null) {
             this.configView(email,provider)
+            this.testFirestore(email,provider)
         }
 
         //Recuperar datos de cnfiguracion de Remote Config
@@ -54,6 +57,23 @@ class HomeActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+    }
+
+    private fun testFirestore(email: String, provider: String){
+        binding.guardarButton.setOnClickListener {
+            db.collection("users").document(email).set(
+                hashMapOf("provider" to provider,
+                    "address" to binding.direccionTextView.text.toString(),
+                    "phone" to binding.telefonoTextView.text.toString())
+            )
+            showAlert("Firestore","Datos guardados.")
+        }
+        binding.recuperarButton.setOnClickListener {
+
+        }
+        binding.elimimnarButton.setOnClickListener {
+
+        }
     }
 
     private fun showAlert(title: String, message: String){

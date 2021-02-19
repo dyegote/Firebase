@@ -23,16 +23,62 @@
             style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="TextView" />
+            android:hint="Email"
+            android:padding="5dp" />
 
         <TextView
             android:id="@+id/providerTextView"
             style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="TextView" />
+            android:hint="Provider"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/direccionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="40dp"
+            android:hint="Caale, numero, piso"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/telefonoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="40dp"
+            android:hint="Telefono"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/guardarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="GUARDAR"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/recuperarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="RECUPERAR"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/elimimnarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="ELIMINAR"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white" />
 
         <Button
             android:id="@+id/googleLogout"
